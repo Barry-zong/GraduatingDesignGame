@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class QiuAreaStayScore : MonoBehaviour
+{
+    public Text qiuScore ;
+    private int score = 0;
+    private float ss = 0;
+    public float Speed = 0.2f;
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // InvokeRepeating("valueAdd", 1f, 1f);
+
+        score = Mathf.RoundToInt(ss);
+        qiuScore.text = score.ToString();
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag =="BoardArea")
+        {         
+            ss+=Speed;           
+        }
+    }
+    void valueAdd()
+    {
+        score++;
+    }
+}
