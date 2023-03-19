@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -111,3 +112,4 @@ public class Android_com_connect : MonoBehaviour
         }
     }
 }
+*/
