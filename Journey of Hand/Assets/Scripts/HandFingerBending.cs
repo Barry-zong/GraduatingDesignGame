@@ -79,6 +79,7 @@ public class HandFingerBending : MonoBehaviour
     {
         time += Time.deltaTime;
         time1 += Time.deltaTime;
+        
     }
 
 }

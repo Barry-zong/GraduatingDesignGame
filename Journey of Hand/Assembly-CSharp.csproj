@@ -88,6 +88,9 @@
     <Compile Include="Assets\Scripts\HandFingerBending.cs" />
     <Compile Include="Assets\Scripts\HandControl.cs" />
     <Compile Include="Assets\Ardity\Scripts\SerialControllerCustomDelimiter.cs" />
+    <Compile Include="Assets\Scripts\Time_limitor.cs" />
+    <Compile Include="Assets\Scripts\EndingGameUIcontrol.cs" />
+    <Compile Include="Assets\Scripts\EndUIconScene1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

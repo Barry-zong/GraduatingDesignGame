@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QiuAreaStayScore : MonoBehaviour
 {
     public Text qiuScore ;
+    public TextMeshProUGUI endQiuscore;
     private int score = 0;
     private float ss = 0;
     public float Speed = 0.2f;
@@ -23,6 +25,7 @@ public class QiuAreaStayScore : MonoBehaviour
 
         score = Mathf.RoundToInt(ss);
         qiuScore.text = score.ToString();
+        endQiuscore.text = score.ToString();
     }
     private void OnTriggerStay(Collider other)
     {
