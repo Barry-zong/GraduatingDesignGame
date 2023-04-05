@@ -1,8 +1,8 @@
-const int flexSensorPin = A4; //analog pin 0
-const int flexSensorPin2 = A3;
+const int flexSensorPin = A5; //analog pin 0
+const int flexSensorPin2 = A1;
 const int flexSensorPin3 = A2;
-const int flexSensorPin4 = A1;
-const int flexSensorPin5 = A0;
+const int flexSensorPin4 = A3;
+const int flexSensorPin5 = A4;
 
 void setup(){
 Serial.begin(9600); 
@@ -35,11 +35,11 @@ int flexSensorReading5 = analogRead(flexSensorPin5);
      
       //the short one is 612-820
       //the loger one is 285-560
-int flex0to100 = map(flexSensorReading, 335, 380, 0, 100);
-int flex0to200 = map(flexSensorReading2, 360, 520, 0, 100);
-int flex0to300 = map(flexSensorReading3, 350, 500, 0, 100);
-int flex0to400 = map(flexSensorReading4, 440, 600, 0, 100);
-int flex0to500 = map(flexSensorReading5, 690, 850, 0, 100);
+int flex0to100 = map(flexSensorReading, 550, 640, 0, 100);
+int flex0to200 = map(flexSensorReading2, 580, 720, 0, 100);
+int flex0to300 = map(flexSensorReading3, 540, 650, 0, 100);
+int flex0to400 = map(flexSensorReading4, 600, 760, 0, 100);
+int flex0to500 = map(flexSensorReading5, 550, 700, 0, 100);
 
 
 int numbeReads = 15 ;

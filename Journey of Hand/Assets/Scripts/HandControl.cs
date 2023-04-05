@@ -1,35 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO.Ports;//Ardrity?
+using System.IO.Ports;
 
 
 public class HandControl : MonoBehaviour
 {
     public float figurAddVelocity = 60;
-    //ËÙ¶ÈĞŞÕı
+    //ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½
     private float fingerDa, fingerShi, fingerZhon, fingerWu, fingerXiao = 0f;
-    //Îå¸öÊÖÖ¸ÍäÇú¶ÈÊäÈëÖµ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
     
     
     //private float  bendValueMax=100;
     //private float  bendValueMin=0;
-    //¸ù¾İÊÖ²¿ÔË¶¯·ù¶È£¬Ç¯ÖÆÊıÖµ·¶Î§(ÓÃÓÚºóĞø¶Ô½Óarduino£¬½«ÊäÈëÊıÖµÓ³ÉäÔÚÕâÁ½¸öÇø¼äÄÚ£©
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½È£ï¿½Ç¯ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Î§(ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½Ô½ï¿½arduinoï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÓ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½
     public Transform tFingerDa2;
     public Transform tFingerShi2;
     public Transform tFingerZhon2;
     public Transform tFingerWu2;
     public Transform tFingerXiao2;
-    //»ñÈ¡Ä£ÄâikÎïÌå×ø±ê
+    //ï¿½ï¿½È¡Ä£ï¿½ï¿½ikï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     //public Transform TestRotate;
 
     MessageManager messageManager;
 
     public float adjustValue = 3;
-    //ÓÃÓÚ¸øÊäÈëÊıÖµÉè¶¨È¡ÕûÇø¼ä
+    //ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½è¶¨È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     public Rigidbody FlyQiuRib ;
-    //´µÇòÇò
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public Transform QiuPenpen;
     public float flyForce = 10;
     private bool goFly = false;
@@ -49,7 +49,7 @@ public class HandControl : MonoBehaviour
     }
 
     private void FixedUpdate()
-    { FingerAct();  }//ÔËĞĞÊÖÖ¸¹Ç÷À±ä»»ÃüÁî
+    { FingerAct();  }//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ä»»ï¿½ï¿½ï¿½ï¿½
 
     void FuZhi ()
     {
@@ -59,9 +59,9 @@ public class HandControl : MonoBehaviour
          float rd = ed * adjustValue;
          if(rd < 0||rd>100)
         {
-            if(rd > 100)
+            if(rd > 130)
             {
-                rd = 100;
+                rd = 130;
                
             }
             if (rd < 0)
@@ -163,11 +163,11 @@ public class HandControl : MonoBehaviour
         FingerZhonBend();
         FingerWuBend();
         FingerXiaoBend();
-    }//´úÂëÊµÏÖÎå¸öÖ¸Í·µÄ¹Ç÷ÀÒÆ¶¯
+    }//ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Ö¸Í·ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
 
     void FingerDaBend()
     {
-        //´æÔÚÎÊÌâ£¬Æô¶¯unityÎÊÌâ×ø±ê¼´¹éÁã
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½unityï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê¼´ï¿½ï¿½ï¿½ï¿½
         tFingerDa2.transform.localRotation = Quaternion.Euler( fingerDa,0, 0f);
         
     }
