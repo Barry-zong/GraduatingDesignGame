@@ -7,50 +7,30 @@ using System.IO.Ports;
 public class HandControl : MonoBehaviour
 {
     public float figurAddVelocity = 60;
-    //�ٶ�����
     private float fingerDa, fingerShi, fingerZhon, fingerWu, fingerXiao = 0f;
-    //�����ָ����������ֵ
-    
-    
-    //private float  bendValueMax=100;
-    //private float  bendValueMin=0;
-    //�����ֲ��˶����ȣ�ǯ����ֵ��Χ(���ں����Խ�arduino����������ֵӳ���������������ڣ�
     public Transform tFingerDa2;
     public Transform tFingerShi2;
     public Transform tFingerZhon2;
     public Transform tFingerWu2;
     public Transform tFingerXiao2;
-    //��ȡģ��ik��������
-    //public Transform TestRotate;
-
-    MessageManager messageManager;
-
     public float adjustValue = 3;
-    //���ڸ�������ֵ�趨ȡ������
-
     public Rigidbody FlyQiuRib ;
-    //������
     public Transform QiuPenpen;
     public float flyForce = 10;
     private bool goFly = false;
     private bool goBreak = true;
     public float fingerflyLimit = 200;
+    MessageManager messageManager;
 
     void Start()
-    {   
-        messageManager=GetComponent<MessageManager>();
-    
-    }
-
+    {  messageManager=GetComponent<MessageManager>();  }
     void Update()
     { 
         FuZhi(); 
         QiuFly();
     }
-
     private void FixedUpdate()
-    { FingerAct();  }//������ָ�����任����
-
+    { FingerAct();  }
     void FuZhi ()
     {
          float qd    = messageManager.Degree_Thumb;
@@ -69,11 +49,8 @@ public class HandControl : MonoBehaviour
                 rd = 0;
             }
         }
-        
- 
         fingerDa = rd ;
-
-          float qs   = messageManager.Degree_Index ;
+        float qs   = messageManager.Degree_Index ;
         float ws = qs / adjustValue;
         float es = Mathf.Round(ws);
         float rs = es * adjustValue;
@@ -89,11 +66,8 @@ public class HandControl : MonoBehaviour
                 rs = 0;
             }
         }
-
-
         fingerShi = rs ;
-
-         float qz    = messageManager.Degree_Middle ;
+        float qz    = messageManager.Degree_Middle ;
         float wz = qz / adjustValue;
         float ez = Mathf.Round(wz);
         float rz = ez * adjustValue;
@@ -109,12 +83,8 @@ public class HandControl : MonoBehaviour
                 rz = 0;
             }
         }
-
-
         fingerZhon = rz ;
-
-          float qw   = messageManager.Degree_Ring ;
-
+        float qw   = messageManager.Degree_Ring ;
         float ww = qw / adjustValue;
         float ew = Mathf.Round(ww);
         float rw = ew * adjustValue;
@@ -130,11 +100,8 @@ public class HandControl : MonoBehaviour
                 rw = 0;
             }
         }
-
         fingerWu = rw ;
-
-          float qx    = messageManager.Degree_Pinky ;
-
+        float qx    = messageManager.Degree_Pinky ;
         float wx = qx / adjustValue;
         float ex = Mathf.Round(wx);
         float rx = ex * adjustValue;
@@ -150,12 +117,8 @@ public class HandControl : MonoBehaviour
                 rx = 0;
             }
         }
-
         fingerXiao = rx ;
-           
-       
     }
-
     void FingerAct()
     {
         FingerDaBend();
@@ -163,42 +126,22 @@ public class HandControl : MonoBehaviour
         FingerZhonBend();
         FingerWuBend();
         FingerXiaoBend();
-    }//����ʵ�����ָͷ�Ĺ����ƶ�
-
+    }
     void FingerDaBend()
-    {
-        //�������⣬���unity�������꼴����
-        tFingerDa2.transform.localRotation = Quaternion.Euler( fingerDa,0, 0f);
-        
-    }
-
+    { tFingerDa2.transform.localRotation = Quaternion.Euler( fingerDa,0, 0f); }
     void FingerShiBend()
-    {
-        tFingerShi2.transform.localRotation = Quaternion.Euler(fingerShi , 0, 0f);
-        //tFingerShi2.transform.localEulerAngles = new Vector3(transform.localEulerAngles.x+fingerShi, -1.811f, 15.367f);
-      
-    }
-
+    { tFingerShi2.transform.localRotation = Quaternion.Euler(fingerShi , 0, 0f); }
     void FingerZhonBend()
-    {
-        tFingerZhon2.transform.localRotation = Quaternion.Euler(fingerZhon, 0, 0f);
-    }
-
+    { tFingerZhon2.transform.localRotation = Quaternion.Euler(fingerZhon, 0, 0f); }
     void FingerWuBend()
-    {
-        tFingerWu2.transform.localRotation = Quaternion.Euler(fingerWu, 0, 0f);
-    }
-
+    { tFingerWu2.transform.localRotation = Quaternion.Euler(fingerWu, 0, 0f); }
     void FingerXiaoBend()
-    {
-        tFingerXiao2.transform.localRotation = Quaternion.Euler(fingerXiao, 0, 0f);
-    }
+    { tFingerXiao2.transform.localRotation = Quaternion.Euler(fingerXiao, 0, 0f); }
 
     void QiuFly ()
     {
         if (FlyQiuRib != null)
         {
-
             if (goBreak)
             {
                 if (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao > fingerflyLimit)
@@ -215,9 +158,7 @@ public class HandControl : MonoBehaviour
             if (!goBreak)
             {
                 if (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao < 100F)
-                {
-                    goBreak = true;
-                }
+                { goBreak = true; }
             }
             float qiuscale;
             float aFall, bFall, cAll;
@@ -226,16 +167,10 @@ public class HandControl : MonoBehaviour
             cAll = (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao)/5;    
             qiuscale = 1-(cAll-aFall)/(bFall-aFall) *0.4f;
             if(qiuscale > 1)
-            {
-                qiuscale = 1;
-            }
+            { qiuscale = 1; }
             if(qiuscale < 0.4f)
-            {
-                qiuscale = 0.4f;
-            }
+            { qiuscale = 0.4f; }
           QiuPenpen.transform.localScale = new Vector3(qiuscale, qiuscale, qiuscale);
-
         }
     }
-
 }
