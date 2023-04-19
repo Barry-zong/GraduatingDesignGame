@@ -19,6 +19,7 @@ public class HandBoardCounter : MonoBehaviour
              score += 1;
             YourScore.text = score.ToString();
             endScore.text = score.ToString();
+           
         }
     }
 }
