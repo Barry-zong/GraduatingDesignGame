@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SceneMove : MonoBehaviour
 {
+    public bool ZtrueXfales = true ;
     public float movingSpeed;
     private float initialSpeed ;
     public Slider slider ;
@@ -19,8 +20,10 @@ public class SceneMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.position = new Vector3( 0 , 0,initialSpeed);
+        if(ZtrueXfales)
+        { transform.position = new Vector3( 0 , 0,initialSpeed);}
+        else
+        { transform.position = new Vector3(initialSpeed, 0 , 0);}
    
     }
     private void FixedUpdate()
