@@ -14,7 +14,8 @@ public class SceneMove : MonoBehaviour
     void Start()
     {
          defultSpeed = movingSpeed;
-        slider.onValueChanged.AddListener(SliderValueChanged);
+         if(slider!=null)
+        {slider.onValueChanged.AddListener(SliderValueChanged);}
     }
     
     // Update is called once per frame

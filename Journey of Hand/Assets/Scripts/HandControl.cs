@@ -20,14 +20,19 @@ public class HandControl : MonoBehaviour
     private bool goFly = false;
     private bool goBreak = true;
     public float fingerflyLimit = 200;
+    public float FingerDegreeAll ;
     MessageManager messageManager;
 
     void Start()
-    {  messageManager=GetComponent<MessageManager>();  }
+    {  
+        messageManager=GetComponent<MessageManager>(); 
+        FingerDegreeAll = 0;
+    }
     void Update()
     { 
         FuZhi(); 
         QiuFly();
+        FingerDegreeAll = (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao)/5;
     }
     private void FixedUpdate()
     { FingerAct();  }
@@ -137,7 +142,6 @@ public class HandControl : MonoBehaviour
     { tFingerWu2.transform.localRotation = Quaternion.Euler(fingerWu, 0, 0f); }
     void FingerXiaoBend()
     { tFingerXiao2.transform.localRotation = Quaternion.Euler(fingerXiao, 0, 0f); }
-
     void QiuFly ()
     {
         if (FlyQiuRib != null)
@@ -157,15 +161,14 @@ public class HandControl : MonoBehaviour
             }
             if (!goBreak)
             {
-                if (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao < 100F)
+                if (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao < 200F)
                 { goBreak = true; }
             }
             float qiuscale;
-            float aFall, bFall, cAll;
+            float aFall, bFall;
             aFall = 20f;
-            bFall = 100f;
-            cAll = (fingerWu + fingerShi + fingerDa + fingerZhon + fingerXiao)/5;    
-            qiuscale = 1-(cAll-aFall)/(bFall-aFall) *0.4f;
+            bFall = 100f;    
+            qiuscale = 1-(FingerDegreeAll-aFall)/(bFall-aFall) *0.4f;
             if(qiuscale > 1)
             { qiuscale = 1; }
             if(qiuscale < 0.4f)

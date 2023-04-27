@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2.2.1_demo_short_level.unity
     guid: 3d04af076a1aac94a91625789bc27605
+  - enabled: 1
+    path: Assets/Scenes/NewTestSmallGame_1.unity
+    guid: 55d9ca18f8f9e3c4aa2300f1eadad949
+  - enabled: 1
+    path: Assets/Scenes/NewTestSmallGame_2.unity
+    guid: e22d71b4cc0f2be43835fe417a5a95df
+  - enabled: 1
+    path: Assets/Scenes/NewTestSmallGame_3.unity
+    guid: 445e2e38cbc6ab7479033ad594d3b77c
+  - enabled: 1
+    path: Assets/Scenes/NewTestSmallGame_4.unity
+    guid: cf59d392e2a82bd42a508f49ba3fb398
+  - enabled: 1
+    path: Assets/Scenes/NewTestSmallGame_5.unity
+    guid: 8fe5b07b63e7a9b40a476715a3a6c1ef
   m_configObjects: {}

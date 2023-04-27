@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Ardity\Scripts\Samples\SampleCustomDelimiter.cs" />
      <Compile Include="Assets\Ardity\Scripts\Samples\SampleUserPolling_ReadWrite.cs" />
+     <Compile Include="Assets\Scripts\MusicLittleGameTaiGuDaRen\ReAbleObiect.cs" />
      <Compile Include="Assets\Ardity\Scripts\Samples\SampleUserPolling_JustRead.cs" />
      <Compile Include="Assets\Scripts\DataRecord_scobj\StartComDataScriptObject.cs" />
      <Compile Include="Assets\Scripts\AndroidComConnectionTest\Android_com_connect.cs" />
@@ -45,6 +46,7 @@
      <Compile Include="Assets\Scripts\MessageManager.cs" />
      <Compile Include="Assets\Scripts\EndingGameUIcontrol.cs" />
      <Compile Include="Assets\Scripts\DataRecord_scobj\ComPortAutoTest.cs" />
+     <Compile Include="Assets\Scripts\BirdJump\BirdJumpLevel.cs" />
      <Compile Include="Assets\Ardity\Scripts\SerialController.cs" />
      <Compile Include="Assets\Ardity\Scripts\Threads\SerialThread.cs" />
      <Compile Include="Assets\Scripts\MathfLerpTest.cs" />
@@ -65,7 +67,10 @@
      <Compile Include="Assets\Scripts\Time_limitor.cs" />
      <Compile Include="Assets\Scripts\AndroidComConnectionTest\AndroidGetUsbpower.cs" />
      <Compile Include="Assets\Scripts\SceneMove.cs" />
+     <Compile Include="Assets\Scripts\MusicLittleGameTaiGuDaRen\TouchQiuAddScoreDestory.cs" />
+     <Compile Include="Assets\Scripts\LeftRightGame\LeftRightHandMove.cs" />
      <Compile Include="Assets\Ardity\Scripts\Threads\SerialThreadLines.cs" />
+     <Compile Include="Assets\Scripts\MusicLittleGameTaiGuDaRen\ResetPosRig.cs" />
      <Compile Include="Assets\Scripts\ArdityTest.cs" />
      <Compile Include="Assets\Scripts\QuestController.cs" />
      <Compile Include="Assets\Scripts\HandFingerBending.cs" />

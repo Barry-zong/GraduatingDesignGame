@@ -24,8 +24,10 @@ public class QiuAreaStayScore : MonoBehaviour
         // InvokeRepeating("valueAdd", 1f, 1f);
 
         score = Mathf.RoundToInt(ss);
-        qiuScore.text = score.ToString();
-        endQiuscore.text = score.ToString();
+        if(qiuScore!= null)
+        {qiuScore.text = score.ToString();}
+        if(endQiuscore!=null)
+        {endQiuscore.text = score.ToString();}
     }
     private void OnTriggerStay(Collider other)
     {
