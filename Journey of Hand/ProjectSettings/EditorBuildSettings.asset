@@ -6,36 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/0_ComTest.unity
+    path: Assets/3D Assets/Scenes/0_ComTest.unity
     guid: 9a267cb280173a545aa18c104ae1d868
   - enabled: 1
-    path: Assets/Scenes/1_Menu.unity
+    path: Assets/3D Assets/Scenes/1_Menu.unity
     guid: 013a640267e160b43a6860772ce02573
   - enabled: 1
-    path: Assets/Scenes/2.1_test_level.unity
+    path: Assets/3D Assets/Scenes/2.1_test_level.unity
     guid: 21080f77a48b8ca4381ee52477b8917a
   - enabled: 1
-    path: Assets/Scenes/2.2_test_level.unity
+    path: Assets/3D Assets/Scenes/2.2_test_level.unity
     guid: 346a5694359d6fd409e19138b2c0f5ef
   - enabled: 1
-    path: Assets/Scenes/2.1.1_demo_short_level.unity
+    path: Assets/3D Assets/Scenes/2.1.1_demo_short_level.unity
     guid: 84407cd16f733e44f8233bc2354733f5
   - enabled: 1
-    path: Assets/Scenes/2.2.1_demo_short_level.unity
+    path: Assets/3D Assets/Scenes/2.2.1_demo_short_level.unity
     guid: 3d04af076a1aac94a91625789bc27605
   - enabled: 1
-    path: Assets/Scenes/NewTestSmallGame_1.unity
+    path: Assets/3D Assets/Scenes/NewTestSmallGame_1.unity
     guid: 55d9ca18f8f9e3c4aa2300f1eadad949
   - enabled: 1
-    path: Assets/Scenes/NewTestSmallGame_2.unity
+    path: Assets/3D Assets/Scenes/NewTestSmallGame_2.unity
     guid: e22d71b4cc0f2be43835fe417a5a95df
   - enabled: 1
-    path: Assets/Scenes/NewTestSmallGame_3.unity
+    path: Assets/3D Assets/Scenes/NewTestSmallGame_3.unity
     guid: 445e2e38cbc6ab7479033ad594d3b77c
   - enabled: 1
-    path: Assets/Scenes/NewTestSmallGame_4.unity
+    path: Assets/3D Assets/Scenes/NewTestSmallGame_4.unity
     guid: cf59d392e2a82bd42a508f49ba3fb398
   - enabled: 1
-    path: Assets/Scenes/NewTestSmallGame_5.unity
+    path: Assets/3D Assets/Scenes/NewTestSmallGame_5.unity
     guid: 8fe5b07b63e7a9b40a476715a3a6c1ef
   m_configObjects: {}
