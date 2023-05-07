@@ -2150,7 +2150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
@@ -8959,6 +8959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8090f8dc46a3834fa296987e736b187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ZtrueXfales: 1
   movingSpeed: 0.025
   slider: {fileID: 1630225426}
 --- !u!1 &660552653

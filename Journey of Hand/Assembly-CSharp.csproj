@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\3D Assets\Scripts\CommanSceneStart.cs" />
      <Compile Include="Assets\Ardity\Scripts\Samples\SampleCustomDelimiter.cs" />
      <Compile Include="Assets\Ardity\Scripts\Samples\SampleUserPolling_ReadWrite.cs" />
      <Compile Include="Assets\3D Assets\Scripts\MusicLittleGameTaiGuDaRen\ReAbleObiect.cs" />
